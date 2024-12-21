@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ploy Flutter Demo',
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 255, 195, 218)),
@@ -19,21 +20,40 @@ class MyApp extends StatelessWidget {
       ),
 
       home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 166, 196, 224),
         appBar: AppBar(
           title: const Text(
-            'Flutter Demo',
-            style: TextStyle(color: Colors.white),
+            'Ploy Flutter Demo',
+            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
           ),
           backgroundColor: const Color.fromARGB(255, 255, 195, 218),
         ),
-        body: Container(
-            height: 100,
-            width: 100,
-            color: const Color.fromARGB(255, 166, 196, 224),
-            padding: const EdgeInsets.all(20),
-            margin: const EdgeInsets.all(20),
-            child: const Text('Hello')
-        ),
+        body: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          Container(
+              padding: const EdgeInsets.all(20),
+              color: Colors.white,
+              child:
+                  const Text("Anton", style: TextStyle(color: Colors.black))),
+          Container(
+              padding: const EdgeInsets.all(20),
+              color: Colors.white,
+              child:
+                  const Text("Eunseok", style: TextStyle(color: Colors.black))),
+          Container(
+              padding: const EdgeInsets.all(20),
+              color: Colors.white,
+              child: const Text("Ploy", style: TextStyle(color: Colors.black))),
+        ]),
+        //Container(
+        //height: 100,
+        //width: 100,
+        //decoration: BoxDecoration(
+        //color: const Color.fromARGB(255, 255, 255, 255),
+        //borderRadius: BorderRadius.circular(20),
+        //),
+        //padding: const EdgeInsets.all(20),
+        //margin: const EdgeInsets.all(20),
+        //child: const Text('Hello')),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             print("Hello");
